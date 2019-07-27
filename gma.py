@@ -1,28 +1,28 @@
 import sys, string, math
-s1,s2 = input().split()
-n1 = len(s1)
-n2 = len(s2)
-if n2 > n1 :
+g1,g2 = input().split()
+m1 = len(g1)
+m2 = len(g2)
+if m2 > m1 :
     i = 0
-    while i<n1 and s1[i] == s2[i] :
+    while i<m1 and g1[i] == g2[i] :
         i += 1
-    print(n2-i)
-elif n2 == n1 :
+    print(m2-i)
+elif m2 == m1 :
     i = 0
-    while i<n2 and s1[i] == s2[i] :
+    while i<m2 and g1[i] == g2[i] :
         i += 1
-    print(n2-i)
+    print(m2-i)
 else :
 
     i = 0
-    while i<n2 and s1[i] == s2[i] :
+    while i<m2 and g1[i] == g2[i] :
         i += 1
-    s31 = s1[i:]
-    s32 = s2[i:]
-    L = list(s31)
+    g31 = g1[i:]
+    g32 = g2[i:]
+    h = list(g31)
     k = 0
-    for c in s32 :
-        if c in L :
+    for c in g32 :
+        if c in h :
             k += 1
-            L.remove(c)
+            h.remove(c)
     print(n1-i-k)
